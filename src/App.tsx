@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import style from './App.module.scss';
+// import style from './App.module.scss';
 
 declare global {
   interface Window {
