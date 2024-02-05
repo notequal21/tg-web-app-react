@@ -1,6 +1,7 @@
 import { FC, ReactPropTypes } from 'react';
 import style from './Header.module.scss';
 import Button from '../Button';
+import { useTelegram } from '../../hooks/useTelegram';
 
 interface IHeader {
   className?: string;
@@ -8,16 +9,12 @@ interface IHeader {
 }
 
 const Header: FC<IHeader> = ({ ...props }) => {
-  const tg = window.Telegram.WebApp;
-
-  const onClose = () => {
-    tg.close();
-  };
+  const { user, onClose } = useTelegram();
 
   return (
     <header {...props} className={`${style.header} ${props.className}`}>
       <Button onClick={onClose} name='Закрыть' />
-      <div className={style.username}>{tg.initDataUnsafe?.user?.username}</div>
+      <div className={style.username}>{user?.username}</div>
     </header>
   );
 };
