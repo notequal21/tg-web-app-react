@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Header from './components/Header';
 // import style from './App.module.scss';
 
 declare global {
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className='wrapper'>
       <div className='content'>
-        <button onClick={onClose}>Закрыть</button>
+        <Header />
       </div>
     </div>
   );
