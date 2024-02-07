@@ -55,7 +55,7 @@ const products = [
 ];
 
 const getTotalPrice = (items: any) => {
-  return items.reducer((acc: any, item: any) => {
+  return items.reduce((acc: any, item: any) => {
     return (acc += item.price);
   }, 0);
 };
