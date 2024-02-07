@@ -14,7 +14,7 @@ const ProductItem = ({ className, product, onAdd }: any) => {
         <div className={'description'}>{product.description}</div>
         <div className={' price'}>
           <span>
-            Стоимость: <b>{product.pricet}</b>
+            Стоимость: <b>{product.price}</b>
           </span>
         </div>
         <Button
